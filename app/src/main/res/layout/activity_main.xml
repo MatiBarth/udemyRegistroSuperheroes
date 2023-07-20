@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/save_button"
+        android:layout_alignParentTop="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/hero_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <EditText
+            android:id="@+id/hero_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/hero_image"
+            android:layout_alignTop="@id/hero_image"
+            android:layout_marginStart="16dp"
+            android:hint="Superhero name" />
+
+        <EditText
+            android:id="@+id/alter_ego_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/hero_image"
+            android:layout_alignBottom="@id/hero_image"
+            android:layout_marginStart="16dp"
+            android:hint="Alter ego" />
+
+        <View
+            android:id="@+id/line_view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/black"
+            android:layout_below="@id/hero_image"
+            android:layout_marginTop="26dp" />
+
+        <TextView
+            android:id="@+id/bio_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bio"
+            android:textColor="@color/black"
+            android:layout_below="@id/line_view"
+            android:layout_marginTop="26dp"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/hero_bio_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bio_textview"
+            android:layout_marginTop="26dp"
+            android:hint="Short Bio" />
+
+        <TextView
+            android:id="@+id/power_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Power"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_below="@id/hero_bio_edit"
+            android:layout_marginTop="36dp"
+            android:gravity="center" />
+
+        <RatingBar
+            android:id="@+id/power_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/power_textview"
+            android:progressTint="@color/yellow"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26dp" />
+    </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
+</layout>
